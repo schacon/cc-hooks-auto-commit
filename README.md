@@ -12,3 +12,9 @@ After a few sessions, while there are no commits on your checked out branch, the
   claude/0e7dfca8-2090-4514-ab28-0f38190d7ba3
   claude/b31327c0-63ec-44d3-bd6f-6bd744807a79
 ```
+
+To enable this, setup your `[~/].claude/settings.json` file similar to the one in this repository. If you clone this repository and run Claude, it should actually do what I'm talking about here.
+
+# License
+
+MIT
