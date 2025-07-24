@@ -19,13 +19,10 @@ index_dir = File.join(cwd, '.git', 'claude', 'indexes', session_id)
 unless Dir.exist?(index_dir)
   FileUtils.mkdir_p(index_dir)
 
-  # Change to the working directory
-  Dir.chdir(cwd) do
-    index_file = File.join(index_dir, 'index')
+  index_file = File.join(index_dir, 'index')
 
-    system("git read-tree --index-output=#{index_file} HEAD")
+  system("git read-tree --index-output=#{index_file} HEAD")
 
-    base_commit = `git rev-parse HEAD`.strip
-    File.write(File.join(index_dir, 'base_commit'), base_commit)
-  end
+  base_commit = `git rev-parse HEAD`.strip
+  File.write(File.join(index_dir, 'base_commit'), base_commit)
 end
